@@ -1,5 +1,5 @@
 var socket = io.connect();
-var trails = new Array();
+var trails = [];
 var paint;
 var colour;
 

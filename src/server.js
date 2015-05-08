@@ -3,19 +3,13 @@ var io = require('socket.io');
 var fs = require('fs');
 var url = require('url');
 
-function trail(x,y,drag,colour) {
-    this.x = x;
-    this.y = y;
-    this.colour = colour;
-}
-
 var trails = [];
 
 var notFound = function(req, res, path) {
     res.writeHead(404);
     res.write('Couldn\'t find this.  Good job mate.\n');
     res.write(path.toString());
-}
+};
 
 var server = http.createServer(function(req, res) {
     var path = url.parse(req.url).pathname;
@@ -55,8 +49,8 @@ socketserv.sockets.on('connection', function(socket) {
 
     socket.on('startPath', function() {
         var newTrail = {
-            x : new Array(),
-            y : new Array(),
+            x : [],
+            y : [],
             c: colour
         };
         trails.push(newTrail);
