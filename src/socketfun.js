@@ -1,4 +1,4 @@
-var socket = io.connect();
+var socket = io.connect('http://frasersharp.com:8085');
 var trails = [];
 var paint;
 var colour;
