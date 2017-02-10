@@ -77,8 +77,5 @@ socketserv.sockets.on('connection', function(socket) {
         socketserv.sockets.emit('clear');
     });
 
-    socket.on('disconnect', function() {
-        console.log('Got disconnect!');
-    });
 });
 
